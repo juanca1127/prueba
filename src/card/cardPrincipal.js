@@ -5,7 +5,9 @@ const CardPrincipal =()=>{
  const [animacion,setAnimacion] = useState(" ")
  const [animacion2,setAnimacion2] = useState(" ")
     return(<>
-    <div  className="card text-center mt-4">
+    <div style={{
+        border:"none"
+    }}  className="card bg-gradient text-center mt-4 card-zIndex">
        
         <div className="card-body">
             <div className="row">

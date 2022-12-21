@@ -28,7 +28,7 @@ const SideClose = () =>{
        <h3 className="title text-bold">Jc Academic</h3> 
       </div>
       <div className='navmobil'>
-      <Navbar.Toggle  onClick={CanvaShow} />
+      <Navbar.Toggle   onClick={CanvaShow} />
       </div>
       
       
@@ -36,6 +36,16 @@ const SideClose = () =>{
       <ul className="nav justify-content-center nav-pills navprincipal">
         <li className="nav-item">
           <button className="nav-link " >Welcome</button>
+        </li>
+        
+        <li className="nav-item">
+          <button onClick={() =>sidesShow({"opcion":"start", "show":true})} className="nav-link " >Left Sidebar</button>
+        </li>
+        <li className="nav-item">
+          <button onClick={() => sidesShow({"opcion":"end", "show":true})} className="nav-link " >Right Sidebar</button>
+        </li>
+        <li className="nav-item">
+          <button className="nav-link " onClick={handleShow} >No Sidebar</button>
         </li>
         <li className="nav-item">
         <Dropdown>
@@ -50,21 +60,12 @@ const SideClose = () =>{
       </Dropdown.Menu>
     </Dropdown>
         </li>
-        <li className="nav-item">
-          <button onClick={() =>sidesShow({"opcion":"start", "show":true})} className="nav-link " >Left Sidebar</button>
-        </li>
-        <li className="nav-item">
-          <button onClick={() => sidesShow({"opcion":"end", "show":true})} className="nav-link " >Right Sidebar</button>
-        </li>
-        <li className="nav-item">
-          <button className="nav-link " onClick={handleShow} >No Sidebar</button>
-        </li>
       </ul>
 
     </div>
 
     <Modal handleClose={handleClose} Show={show} />
-    <MenuMobil handleShow={handleShow} show={canvasShow} handleClose={CanvasClose} />
+    <MenuMobil sidesShow={sidesShow} handleShow={handleShow} show={canvasShow} handleClose={CanvasClose} />
     <Sidebar  close ={SideClose} handleShow={sideShow}/>
     
   </nav>

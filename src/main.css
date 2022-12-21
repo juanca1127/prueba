@@ -2,7 +2,19 @@
    font-family: monospace;
 }
 body{
-    background: beige;
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+
+}
+.card-zIndex{
+    z-index: -10;
+}
+.bg-gradient{
+    background: #899189;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8c7e7e, #546254);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dbcaca, #4e554e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .left{
     text-align: left;
@@ -26,6 +38,7 @@ a.nav-link:hover{
 button.nav-link:hover{
     color: white;
     text-decoration:line-through;
+   
     background: rgb(72, 71, 71);
     transition: transform .3s ease all;
       
